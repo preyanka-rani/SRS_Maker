@@ -1,0 +1,77 @@
+# ── Python ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-log.txt
+
+# ── Testing ──────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+nosetests.xml
+test-results/
+junit.xml
+
+# ── Secrets & environment ────────────────────────────────────
+.env
+*.pem
+*.key
+*.crt
+*.cert
+service_account.json
+credentials.json
+google_credentials.json
+
+# ── Celery ───────────────────────────────────────────────────
+celerybeat-schedule
+celerybeat.pid
+celery_*.log
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Storage / generated output ───────────────────────────────
+storage/
+templates/work/
+
+# ── Docker local data volumes ────────────────────────────────
+.pgdata/
+redisdata/
+
+# ── LangGraph ────────────────────────────────────────────────
+.langgraph/
+
+# ── Temp / scratch ───────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+
+# ── IDE & OS ─────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Confidential source docs ─────────────────────────────────
+SRS-DLAS*.docx
+IMPLEMENTATION_PLAN.md
+
+# ── Sample / test data (contains real email addresses) ───────
+samples/

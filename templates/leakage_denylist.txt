@@ -1,0 +1,13 @@
+# Strings that must never appear in the template or in any generated SRS.
+# One per line, matched case-insensitively. They come from the supplied sample document.
+DLAS
+DBLA
+UNDP
+European Union
+Legal Aid
+Ministry of Law
+bdlaws.minlaw.gov.bd
+dlas-demo.oss.net.bd
+figma.com
+Keycloak
+16699

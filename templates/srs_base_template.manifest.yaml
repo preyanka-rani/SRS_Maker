@@ -1,0 +1,21 @@
+# Manifest of the Clean Base Template (versioned with the template).
+template: srs_base_template.docx
+template_version: 1
+renderer: docxtpl
+sections:
+  - {key: document_control, heading: Document Control, method: D, mode: core}
+  - {key: revision_history, heading: Revision History, method: D, mode: core}
+  - {key: introduction, heading: Introduction, method: L, mode: core}
+  - {key: overall_description, heading: Overall Description, method: L, mode: core}
+  - {key: functional_requirements, heading: Functional Requirements, method: D, mode: core}
+  - {key: non_functional_requirements, heading: Non-Functional Requirements, method: D, mode: cond}
+  - {key: security_requirements, heading: Security Requirements, method: D, mode: cond}
+  - {key: business_rules, heading: Business Rules, method: D, mode: cond}
+  - {key: integrations, heading: Integration Requirements, method: D, mode: cond}
+  - {key: other_requirements, heading: Constraints, Assumptions and Dependencies, method: D, mode: cond}
+  - {key: gaps, heading: Gap and Ambiguity Analysis, method: D, mode: core}
+status_labels:
+  confirmed: CONFIRMED
+  proposed: PROPOSED
+  modified: MODIFIED — PENDING CONFIRMATION
+  needs_clarification: NEEDS CLARIFICATION
