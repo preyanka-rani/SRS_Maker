@@ -160,9 +160,10 @@ def queue_review_email(session: Session, storage: LocalStorage, settings: Settin
         issue_service.open_manual_review(session, project.id, "NO_RECIPIENT",
                                          entity_type="project", entity_id=str(project.id))
         return
-    questions = vm.blocking_questions(session, project.id)
-    q_block = ("\nOpen questions we need your help with:\n" + "\n".join(f"  - {q}" for q in questions)
-               + "\n") if questions else ""
+    questions = vm.open_questions(session, project.id)
+    q_block = ("\nTo make the SRS complete, please answer these questions in your reply "
+               "(a sentence each is fine; start each answer with its number):\n"
+               + "\n".join(f"  {n}. {q}" for n, q in enumerate(questions, 1)) + "\n") if questions else ""
     label = version.version_label
     body = (
         f"Hello,\n\nPlease find attached the Software Requirements Specification (SRS) for "

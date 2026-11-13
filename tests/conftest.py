@@ -36,6 +36,13 @@ def pg_url():
 
     cfg = Config("alembic.ini")
     command.upgrade(cfg, "head")
+    # LangGraph's tables are created with CREATE INDEX CONCURRENTLY, which waits for every open
+    # transaction; do it once here, before any test holds a session open.
+    from app.core.config import get_settings
+    from app.workflows.runner import prepare_checkpoints
+
+    get_settings.cache_clear()
+    prepare_checkpoints(get_settings())
     yield url
     server.cleanup()
 
